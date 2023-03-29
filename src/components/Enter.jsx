@@ -1,7 +1,7 @@
 import $ from 'jquery'
 import typewriterLineBreak from '../assets/sounds/typewriterLineBreak.mp3'
 
-const Enter = ({ input, setInput, correctGuess, setCorrectGuess, word }) => {
+const Enter = ({ input, setInput, correctGuess, setCorrectGuess, word, setUserInput, userInput }) => {
     const handleClick = () => {
         let hasEmpty = false
         for(let i = input.length -1; i >= 0; i--){
@@ -36,6 +36,7 @@ const Enter = ({ input, setInput, correctGuess, setCorrectGuess, word }) => {
                 emptyWord.push('')
             }
             setInput(emptyWord)
+            setUserInput(userInput.concat(input))
         } else {
             console.log('false')
         }

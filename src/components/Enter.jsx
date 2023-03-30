@@ -36,7 +36,15 @@ const Enter = ({ input, setInput, correctGuess, setCorrectGuess, word, setUserIn
                 emptyWord.push('')
             }
             setInput(emptyWord)
-            setUserInput(userInput.concat(input))
+            setUserInput(userInput.concat([input.map((x,i)=>{
+                if(word[i] == x){
+                    return [x, '#52D452']
+                } else if (word.includes(x)){
+                    return [x, '#fdfd96']
+                } else {
+                    return [x, '#CCCCC4']
+                }
+            })]))
         } else {
             console.log('false')
         }

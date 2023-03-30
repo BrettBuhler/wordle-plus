@@ -19,21 +19,17 @@ const GameBoard = ({input, userInput, setUserInput}) => {
     const displayFunction = (arr, num, x) => {
         if (arr[num]){
             return arr[num]
+        } else if (num == arr.length){
+            return input.map(x=>[x, '#eee'])
         } else {
-            return ['', 'grey']
+            return x.map(x=>[x,'#eee'])
         }
     }
-    console.log('this is input', input)
-
-    console.log('this is userInput,', userInput)
-    console.log('this is gamestate', gameState)
-    console.log('userinputlen', userInput.length)
     if (userInput.lenth + gameState.length > 6){
         setGameState(gameState.slice(0,gameState.length-2))
     }
     return (
         <div id="gameBoard">
-
             {gameState.map((x,i)=><GameRow toDisplay={displayFunction(userInput, i, x)} key={i*732}/>)}
         </div>
     )

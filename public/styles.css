@@ -11,6 +11,7 @@
     display: grid;
     grid-template-columns: 8.33% 8.33% 8.33% 8.33% 8.33%;
     grid-template-rows: 20%, 20%, 20%, 20%, 20% 20%;
+    margin-bottom: 2px;
 }
 
 #keyboard {
@@ -19,15 +20,16 @@
     grid-template-rows: 33% 33% 33%;
     height: 21vw;
     width: 60vw;
+    margin-left: 20vw;
+    margin-top: 2px;
 }
 
 #gameBoard {
-    display: flex;
-    flex-direction: row;
-    flex: auto;
-    width: 60vw;
+    display: inline-block;
+    width: 30vw;
     height: 40vh;
-
+    margin-left: 35vw;
+    padding-bottom: 2px;
 }
 
 .backspace:hover {
@@ -71,21 +73,64 @@
 .displayKey:hover{
     box-shadow: 0 5px 15px rgba(33, 33, 86, 0.4);
 }
+
+.displayDiv {
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%)
+}
 .displayKey {
+    text-align: center;
     column-span: 1;
     border: 1px solid black;
-    margin: 2px;
+    margin: auto;
     border-radius: 5px;
-    justify-content: center;
     font-size: 2vw;
     font-family: 'Courier New', Courier, monospace;
     font-weight: 700;
-    height: 6vh;
-    width: 6vw;
+    height: 5vh;
+    width: 5vw;
+    margin-bottom: 1vh;
 }
 
 .gameRow {
-    display: inline-block;
-    grid-template-columns: 100%;
-    grid-template-rows: 20% 20% 20% 20% 20%;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 100%;
 }
+
+.endScreen {
+    font-size: 2vw;
+    margin: auto;
+    height: 85vh;
+    width: 80vw;
+    margin: '0';
+    padding-top: 15vh;
+}
+
+.endMessage {
+    font-size: 2vw;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+    margin-top: 15vh;
+}
+
+.play-again-button {
+    display: inline-block;
+    background-color: #52D452;
+    color: white;
+    font-size: 2vw;
+    font-weight: 700;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    padding: 20px 40px;
+    margin-top: 15vh;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+  }
+
+  
+  .play-again-button:hover {
+    background-color: #69D69B;
+  }

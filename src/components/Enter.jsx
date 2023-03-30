@@ -1,11 +1,19 @@
 import $ from 'jquery'
 import typewriterLineBreak from '../assets/sounds/typewriterLineBreak.mp3'
 
+
 const Enter = ({ input, setInput, correctGuess, setCorrectGuess, word, setUserInput, userInput }) => {
+
+    const handleEnter = (event) => {
+        if (event.key === 'Enter'){
+            handleClick()
+            document.removeEventListener('keyup', handleEnter)
+        }
+    }
+
     const handleClick = () => {
         let hasEmpty = false
         for(let i = input.length -1; i >= 0; i--){
-            console.log(input[i])
             if (input[i] === ''){
                 hasEmpty = true
             }
@@ -45,10 +53,11 @@ const Enter = ({ input, setInput, correctGuess, setCorrectGuess, word, setUserIn
                     return [x, '#CCCCC4']
                 }
             })]))
-        } else {
-            console.log('false')
-        }
+        } 
     }
+
+    document.addEventListener('keyup', handleEnter)
+
     return (
         <button className="enter" onClick={handleClick}>ENTER</button>
     )

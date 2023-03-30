@@ -1,9 +1,8 @@
 const GameRow = ({ toDisplay }) => {
-    console.log('toDisplay', toDisplay)
     return (
-        <div className="gameRow">
-            {toDisplay.map((x,i)=><div id={x} key={i*33} className='displayKey' style={{backgroundColor: x[1]}}>{x[0]}</div>)}
-        </div>
+        <div className="gameRow">{toDisplay.map((x,i)=>{
+            return <div className="displayKey" style={{backgroundColor: x[1]}} key={i*321}><div className="displayDiv">{x[0]}</div></div>
+        })}</div>
     )
 }
 

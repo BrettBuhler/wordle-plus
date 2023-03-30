@@ -1,6 +1,20 @@
+import { useEffect } from 'react'
 import backspace from '../assets/sounds/backspace.mp3'
 
 const Backspace = ({ input, setInput }) => {
+    
+    useEffect(()=>{
+        const handleKeyPress = (event) => {
+            if(event.key === 'Backspace') {
+                handleClick()
+            }
+        }
+        document.addEventListener('keydown', handleKeyPress)
+        return () => {
+            document.removeEventListener('keydown', handleKeyPress)
+        }
+    },input)
+
     const handleClick = () => {
         let index = false
         for (let i = input.length - 1; i >= 0; i--){

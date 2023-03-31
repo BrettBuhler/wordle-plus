@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.js": "/wordle-plus/static/js/main.7bcdd220.js",
+    "static/media/backspace.mp3": "/wordle-plus/static/media/backspace.776e97525f0b24f13401.mp3",
+    "static/media/typewriterKey.mp3": "/wordle-plus/static/media/typewriterKey.4659fe29189da871a13b.mp3",
+    "static/media/typewriterLineBreak.mp3": "/wordle-plus/static/media/typewriterLineBreak.454a86e637c246811711.mp3",
+    "index.html": "/wordle-plus/index.html",
+    "main.7bcdd220.js.map": "/wordle-plus/static/js/main.7bcdd220.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.7bcdd220.js"
+  ]
+}

@@ -38,7 +38,7 @@ The only external dependencies used in this application are:
 
 ## Try it out
 
-This application is hosted on GitHub Pages, and you can try it out by visiting [https://brettbuhler.github.io/wordle-plus](https://brettbuhler.github.io/wordle-plus).
+This application is hosted on GitHub Pages, and you can try it out by visiting [https://brettbuhler.github.io/wordle-plus](https://yourusername.github.io/wordle-plus).
 
 ## Contributing
 
